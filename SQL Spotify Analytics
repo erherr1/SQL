@@ -1,0 +1,29 @@
+SELECT * FROM BIT_DB.Spotifydata;
+
+SELECT AVG(energy), artist_name
+FROM BIT_DB.Spotifydata;
+
+SELECT artist_name, popularity
+FROM BIT_DB.Spotifydata
+ORDER BY popularity desc
+LIMIT 10;
+
+
+SELECT artist_name, duration_ms AS longest_track
+FROM BIT_DB.Spotifydata
+ORDER BY longest_track desc
+LIMIT 5;
+
+SELECT distinct artist_name, track_name
+FROM BIT_DB.Spotifydata
+WHERE artist_name = 'Olivia Rodrigo'
+ORDER BY duration_ms ASC;
+
+SELECT artist_name, energy
+FROM BIT_DB.Spotifydata
+ORDER BY energy asc
+LIMIT 10;
+
+SELECT track_name
+FROM BIT_DB.Spotifydata
+WHERE instrumentalness = '0';
